@@ -1,0 +1,28 @@
+# Battlefield / operational sound classes for training
+# Use these as proposed labels; refine after an initial audit.
+classes:
+  - explosion
+  - artillery
+  - mortar
+  - gunfire_rifle
+  - gunfire_machine_gun
+  - small_arms (shot)
+  - helicopter
+  - fixed_wing_aircraft
+  - drone_uav
+  - vehicle_engine
+  - vehicle_movement (tracks/wheel)
+  - tank_move
+  - siren
+  - building_collapse
+  - glass_shatter
+  - footsteps
+  - voices_shouting
+  - radio_communication
+  - alarm_beacon
+  - ambient_urban_noise
+  - rain_wind
+  - animal_sounds
+  - horn_hailer
+  - unknown
+  - silence
