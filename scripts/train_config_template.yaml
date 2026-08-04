@@ -1,0 +1,13 @@
+# Training configuration template
+# Edit values before running transfer_train.py
+
+data_csv: data/processed/segments.csv
+classes_file: CLASSES.yaml
+pretrained_ckpt: experiments/dc_waveformer/39.pt
+output_dir: experiments/finetune
+device: auto
+batch_size: 32
+epochs: 5
+lr: 1e-4
+export_onnx: false
+dummy_wave_len: 16000
