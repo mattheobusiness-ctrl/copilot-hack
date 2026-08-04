@@ -175,7 +175,7 @@ def main():
     p.add_argument('--time_shift', type=float, default=0.0, help='seconds to shift')
     p.add_argument('--pitch_shift', type=float, default=0.0, help='n_steps for pitch_shift')
     p.add_argument('--noise_snr', type=float, default=None, help='additive noise SNR in dB')
-    p.add_argument('--dry_run', action='store_true', default=True, help='do not write files')
+    p.add_argument('--dry_run', action='store_true', default=False, help='do not write files (default: write files)')
     p.add_argument('--keep_channels', action='store_true', default=False)
     p.add_argument('--target_rms', type=float, default=0.1)
     args = p.parse_args()
