@@ -78,9 +78,11 @@ def train(cfg_path):
     model = build_model(num_classes, device, cfg.get('pretrained_ckpt'))
 
     dataset = SegmentsDataset(cfg['data_csv'])
-    dataloader = DataLoader(dataset, batch_size=cfg.get('batch_size',32), shuffle=True, num_workers=4)
+    batch_size = int(cfg.get('batch_size', 32))
+    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=4)
 
-    optimizer = torch.optim.Adam(model.parameters(), lr=cfg.get('lr',1e-4))
+    lr = float(cfg.get('lr', 1e-4))
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     criterion = nn.CrossEntropyLoss()
 
     out_dir = cfg.get('output_dir','experiments/finetune')

@@ -1,0 +1,12 @@
+# Local test config for quick smoke run
+
+data_csv: data/processed/segments.csv
+classes_file: CLASSES.txt
+pretrained_ckpt: ''
+output_dir: experiments/finetune_local
+device: cpu
+batch_size: 8
+epochs: 1
+lr: 1e-4
+export_onnx: false
+dummy_wave_len: 16000
