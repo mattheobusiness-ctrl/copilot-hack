@@ -1,0 +1,43 @@
+# Mapping from public dataset labels to project classes (suggested)
+# Use this as starting point; refine per-dataset after inspecting label names.
+
+esc50:
+  note: ESC-50 has environmental sounds; map ambient and some impact sounds
+  mappings:
+    dog: animal_sounds
+    chainsaw: vehicle_movement
+    helicopter: helicopter
+    thunder: explosion
+    glass_breaking: glass_shatter
+    footsteps: footsteps
+
+urbansound8k:
+  note: urban sounds useful for sirens, horns, engines
+  mappings:
+    siren: siren
+    engine_idling: vehicle_engine
+    car_horn: horn_hailer
+    jackhammer: building_collapse
+
+fsd50k:
+  note: large Freesound-derived dataset; use manifest to map many classes
+  mappings:
+    explosion: explosion
+    gun_shot: gunfire_rifle
+    gunfire: gunfire_machine_gun
+    helicopter: helicopter
+    vehicle: vehicle_movement
+
+freesound:
+  note: clip-level; prefer CC0/CC-BY and inspect per-clip
+  mappings: 'use manual/automated matching by tag/description -> CLASSES.yaml'
+
+audioset:
+  note: contains YouTube ids and many labels; prepare per-class id lists
+  mappings:
+    Explosion: explosion
+    Gun_shot: gunfire_rifle
+    Helicopter: helicopter
+    Drone: drone_uav
+
+# After mapping, run a sampling pass to verify class balance and label quality.

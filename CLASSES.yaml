@@ -6,12 +6,12 @@ classes:
   - mortar
   - gunfire_rifle
   - gunfire_machine_gun
-  - small_arms (shot)
+  - small_arms
   - helicopter
   - fixed_wing_aircraft
   - drone_uav
   - vehicle_engine
-  - vehicle_movement (tracks/wheel)
+  - vehicle_movement
   - tank_move
   - siren
   - building_collapse
